@@ -89,14 +89,14 @@ class MotionApp:
 
         self.frame1_gray = frame2_gray
 
-        # Show frame in Tkinter
+        
         frame_rgb = cv2.cvtColor(frame2, cv2.COLOR_BGR2RGB)
         img = Image.fromarray(frame_rgb)
         imgtk = ImageTk.PhotoImage(image=img)
         self.video_label.imgtk = imgtk
         self.video_label.config(image=imgtk)
 
-        self.root.after(30, self.update_frame)  # Schedule next frame after 30ms
+        self.root.after(30, self.update_frame)  
 
 if __name__ == "__main__":
     root = tk.Tk()
